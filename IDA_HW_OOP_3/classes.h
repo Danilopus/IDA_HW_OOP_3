@@ -19,7 +19,7 @@ public:
 	void AddElement(std::string menu_element){	_menu_elements.push_back(menu_element);	}
 	void Show_menu();
 	int User_Choice_Handle();
-	void User_Choice_Handle(int key_code);
+	int User_Choice_Handle(int key_code);
 };
 
 class Fraction

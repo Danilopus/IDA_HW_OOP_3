@@ -148,11 +148,10 @@ int main()
 	MainMenu.AddElement("ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo");		// Menu element 2
 	MainMenu.AddElement("ComplexNumber class through including with overloaded operators: + | - | / | * demo");		// Menu element 3
 	//MainMenu.AddElement("XXX");
-
 	do 
 	{		
 		MainMenu.Show_menu();
-		if (!MainMenu.User_Choice_Handle())	break;
+		if (!MainMenu.User_Choice_Handle(_getch()))	break;
 	} while (true);
 	return 0;
 }

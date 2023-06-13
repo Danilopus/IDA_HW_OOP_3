@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <vector>
 #include <map>
 #include <string>
@@ -40,7 +40,7 @@ int Get_Int_SA() {
 
 		if ((a.find_first_not_of("-0123456789") == -1))
 		{
-			for (int i = 1; i < a.size(); i++) // определяем есть ли минусы кроме первого символа
+			for (int i = 1; i < a.size(); i++) // РѕРїСЂРµРґРµР»СЏРµРј РµСЃС‚СЊ Р»Рё РјРёРЅСѓСЃС‹ РєСЂРѕРјРµ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р°
 			{
 				if (a[i] == '-')
 				{
@@ -74,19 +74,21 @@ int Get_Int_SA() {
 }
 */
 
+//*
 struct ComplexNumber
 {	
 //private:
 //protected:
 	double _real_part;
 	double _imagine_part;
-};
+};//*/
 
 
 /*
 class ComplexNumber
 {
-protected:
+//protected:
+public:
 	double _real_part;
 	double _imagine_part;
 };//*/
@@ -95,7 +97,7 @@ class ComplexNumber_class_through_inheritance : public ComplexNumber
 {
 	static std::vector <ComplexNumber_class_through_inheritance*> _numbers_list;
 public:
-	//не могу заставить работать инициализацию через :
+	//РЅРµ РјРѕРіСѓ Р·Р°СЃС‚Р°РІРёС‚СЊ СЂР°Р±РѕС‚Р°С‚СЊ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ С‡РµСЂРµР· :
 	//ComplexNumber_class(double real_part = -1, double imagine_part = -1): _real_part(real_part), _imagine_part(imagine_part)
 	ComplexNumber_class_through_inheritance(double real_part = -1, double imagine_part = -1);
 	static void Initialisation(int provided_at_startup_complex_number_quantity);
@@ -135,5 +137,5 @@ public:
 	ComplexNumber_class_through_including& operator/(const ComplexNumber_class_through_including& another_complex_number);
 };
 
-// Вывод:::::::::::::::::::::::::::::::::::::::::::::::
-// При наследовании можно сделать поля базового класса protected, а при include доступ возможен только если public
+// Р’С‹РІРѕРґ:::::::::::::::::::::::::::::::::::::::::::::::
+// РџСЂРё РЅР°СЃР»РµРґРѕРІР°РЅРёРё РјРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РїРѕР»СЏ Р±Р°Р·РѕРІРѕРіРѕ РєР»Р°СЃСЃР° protected, Р° РїСЂРё include РґРѕСЃС‚СѓРї РІРѕР·РјРѕР¶РµРЅ С‚РѕР»СЊРєРѕ РµСЃР»Рё public

@@ -1,4 +1,4 @@
-#include "ComplexNumber.h"
+ï»¿#include "ComplexNumber.h"
 std::vector <ComplexNumber_class_through_inheritance*> ComplexNumber_class_through_inheritance::_numbers_list;
 std::vector <ComplexNumber_class_through_including*> ComplexNumber_class_through_including::_numbers_list_inc;
 
@@ -145,7 +145,7 @@ ComplexNumber_class_through_inheritance* ComplexNumber_class_through_inheritance
 		}*/
 		else if (49 <= input && input <= 57)
 		{
-			//_getch(); ïðèäóìàòü 2õ çíà÷íûé ââîä
+			//_getch(); Ð¿Ñ€Ð¸Ð´ÑƒÐ¼Ð°Ñ‚ÑŒ 2Ñ… Ð·Ð½Ð°Ñ‡Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´
 			std::cout << console_clear;
 			if (codes_of_digits[input] >= _numbers_list.size())
 			{
@@ -328,7 +328,7 @@ ComplexNumber_class_through_including* ComplexNumber_class_through_including::Ge
 		}*/
 		else if (49 <= input && input <= 57)
 		{
-			//_getch(); ïðèäóìàòü 2õ çíà÷íûé ââîä
+			//_getch(); Ð¿Ñ€Ð¸Ð´ÑƒÐ¼Ð°Ñ‚ÑŒ 2Ñ… Ð·Ð½Ð°Ñ‡Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´
 			std::cout << console_clear;
 			if (codes_of_digits[input] >= _numbers_list_inc.size())
 			{

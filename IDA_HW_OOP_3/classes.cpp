@@ -283,13 +283,23 @@ int Main_menu::User_Choice_Handle()
 	else { std::cout << "\nSuch choice does not exist yet\n"; Sleep(1000); }
 	return 1;
 }
-void Main_menu::User_Choice_Handle(int key_code)
+int Main_menu::User_Choice_Handle(int key_code)
 {
+	//int input = _getch();
+	//if (key_code >= 48 &&  key_code <= 58 )
+		std::cout << key_code-48 << "\n\n";
 	switch (key_code)
 	{
-	case 1: break;
-		//case:
+	case 27: case 48: 
+	{ std::cout << "\nGood By"; for (int j = 0; j < 50; j++) { Sleep(50 - j); std::cout << "y"; } std::cout << "e!"; Sleep(850);  return 0;	}
+	case 49: Task_1(); break;
+	case 50: Task_2(); break;
+	case 51: Task_3(); break;
+	case 52: Task_4(); break;
+	//case 53: Task_5(); break;
+	default: { std::cout << "\nSuch choice does not exist yet\n"; Sleep(1000); }
 	}
+	return 1;
 }
 
 
