@@ -90,9 +90,9 @@ void Task_1()
 void Task_2()
 //void Task_2(std::string name_of_work)
 {
-	std::cout << "***\t ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo\n";
-	std::cout << "Enter provided_at_startup_complex_number_quantity ->";
-	int provided_at_startup_complex_number_quantity = Get_Int_Positive(0,20, "it's too much, reasonable limit is 20");
+	//std::cout << "***\t ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo\n";
+	std::cout << "Enter provided_at_startup_complex_number_quantity -> ";
+	int provided_at_startup_complex_number_quantity = Get_Int_Positive(0,10, "it's too much, reasonable limit is 10 -> ");
 	ComplexNumber_class_through_inheritance::Initialisation(provided_at_startup_complex_number_quantity);
 
 	do
@@ -106,6 +106,7 @@ void Task_2()
 
 		std::cout << "\n\nEsc - for exit, any key to continue";
 	} while (_getch() != 27);
+	ComplexNumber_class_through_inheritance::MemoryClean();
 }
 
 
@@ -116,10 +117,11 @@ void Task_3() {}
 // MAIN ------- MAIN ------- MAIN ------- MAIN ------- MAIN --------
 int main()
 {
+	srand(time(NULL));
 	//setlocale(LC_CTYPE, "Russian");
 	//system("mode con cols=60 lines=40"); 
 	Main_menu MainMenu;	
-	MainMenu.AddElement("OOP Home Work 01: Intro");	// Homework name
+	MainMenu.AddElement("OOP Home Work 03: Classes. Operators overload");	// Homework name
 	MainMenu.AddElement("Fractions with overloaded operators: + | - | / | * demo");				// Menu element 1
 	MainMenu.AddElement("ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo");		// Menu element 2
 	//MainMenu.AddElement("XXX");

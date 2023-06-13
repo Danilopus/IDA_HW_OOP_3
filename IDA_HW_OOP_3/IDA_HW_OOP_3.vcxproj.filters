@@ -24,10 +24,10 @@
     <ClCompile Include="Service functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="!___questions___.cpp">
+    <ClCompile Include="ComplexNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ComplexNumber.cpp">
+    <ClCompile Include="!___questions___.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

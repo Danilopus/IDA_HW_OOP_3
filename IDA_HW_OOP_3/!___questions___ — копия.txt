@@ -78,10 +78,3 @@ Fraction* operator+(Fraction& another_Fraction)
 	return result_fraction;
 }
 //*/
-
-//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//Q5 пока вот это 
-// std::vector <ComplexNumber_class_through_inheritance*> ComplexNumber_class_through_inheritance::_numbers_list;
-// не было перенесено из .h в .cpp была ошибка LINK2005
-//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-

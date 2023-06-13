@@ -88,7 +88,8 @@ int Get_Int_Positive(int BOTTOM_limit, int UP_limit, std::string comment)
 				if (try_to_get_int < BOTTOM_limit || try_to_get_int > UP_limit)
 				{
 					std::cout << comment;
-					return Get_Int_Positive();
+					//return UP_limit;
+					return Get_Int_Positive(BOTTOM_limit, UP_limit, comment);
 				}
 
 				return stoi(a);
@@ -100,12 +101,12 @@ int Get_Int_Positive(int BOTTOM_limit, int UP_limit, std::string comment)
 		else
 		{
 			std::cout << "Input Error: Positive [INTEGER] expected.\n";
-			return Get_Int_Positive();
+			return Get_Int_Positive(BOTTOM_limit, UP_limit, comment);
 		}
 	}
 	else
 		std::cout << "Input Error: NULL input. Positive [INTEGER] expected.\n";
-	return Get_Int_Positive();
+	return Get_Int_Positive(BOTTOM_limit, UP_limit, comment);
 }
 int Get_Int_PG()
 {
