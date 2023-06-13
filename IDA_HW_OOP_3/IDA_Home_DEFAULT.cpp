@@ -20,7 +20,9 @@ void Task_1()
 	//Вариант хранения объектов класса Fraction в векторе объектов вне класса (из точки вызова, с передачей указателя на этот вектор)
 	std::vector<Fraction*> Available_fractions;
 	//static std::vector<Fraction*> Available_fractions;
-	Fraction fraction_1(5, 7, Available_fractions), fraction_2(7,19, Available_fractions);
+	//Fraction fraction_1(5, 7, Available_fractions), fraction_2(7,19, Available_fractions);
+	Fraction fraction_1 = *new Fraction(5, 7, Available_fractions); 
+	Fraction fraction_2 = *new Fraction(7, 19, Available_fractions);
 	
 	do
 	{	

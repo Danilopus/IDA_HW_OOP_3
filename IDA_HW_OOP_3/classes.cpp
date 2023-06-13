@@ -43,7 +43,7 @@ void Fraction::ShowAvailableFractions(std::vector<Fraction*> Available_fractions
 }
 void Fraction::Memory_Clean(const std::vector<Fraction*>& Available_fractions)
 {
-	for (int i{ 0 }; i < Available_fractions.size(); i++)
+	for (int i = 0; i < Available_fractions.size(); i++)
 		delete Available_fractions[i];
 }
 Fraction* Fraction::operator+(const Fraction& another_Fraction) {
