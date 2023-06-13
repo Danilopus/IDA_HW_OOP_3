@@ -277,8 +277,8 @@ int Main_menu::User_Choice_Handle()
 
 	else if (choice == 1) Task_1();
 	else if (choice == 2) Task_2();
-	//else if (choice == 3) Task_3();
-	//else if (choice == 4) Task_4();
+	else if (choice == 3) Task_3();
+	else if (choice == 4) Task_4();
 
 	else { std::cout << "\nSuch choice does not exist yet\n"; Sleep(1000); }
 	return 1;

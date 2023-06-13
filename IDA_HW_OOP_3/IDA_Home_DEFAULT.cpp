@@ -88,7 +88,7 @@ void Task_1()
 	//сам вектор std::vector<Fraction*> Available_fractions вроде должен быть уничтожен автоматически, т.к. находится в стэке (мне так кажется)
 }
 
-//Task 2 ComplexNumber_class_through_inheritance class with overloaded operators: + | - | / | * demo
+//Task 2 ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo
 void Task_2()
 //void Task_2(std::string name_of_work)
 {
@@ -112,9 +112,29 @@ void Task_2()
 }
 
 
-//Task 3
-void Task_3() {}
+//Task 3 ComplexNumber class through including with overloaded operators: + | - | / | * demo
+void Task_3()
+{
+	std::cout << "Enter provided_at_startup_complex_number_quantity -> ";
+	int provided_at_startup_complex_number_quantity = Get_Int_Positive(0, 10, "it's too much, reasonable limit is 10 -> ");
+	ComplexNumber_class_through_including::Initialisation(provided_at_startup_complex_number_quantity);
 
+	do
+	{
+		system("cls");
+		std::cout << "***\t ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo\n";
+
+		ComplexNumber_class_through_including::Show_List_of_available_numbers();
+		ComplexNumber_class_through_including::ShowMethods();
+		ComplexNumber_class_through_including::User_Choice_Handle();
+
+		std::cout << "\n\nEsc - for exit, any key to continue";
+	} while (_getch() != 27);
+	ComplexNumber_class_through_including::MemoryClean();
+}
+
+//Task 4
+void Task_4() {}
 
 // MAIN ------- MAIN ------- MAIN ------- MAIN ------- MAIN --------
 int main()
@@ -126,6 +146,7 @@ int main()
 	MainMenu.AddElement("OOP Home Work 03: Classes. Operators overload");	// Homework name
 	MainMenu.AddElement("Fractions with overloaded operators: + | - | / | * demo");				// Menu element 1
 	MainMenu.AddElement("ComplexNumber class through inheritance with overloaded operators: + | - | / | * demo");		// Menu element 2
+	MainMenu.AddElement("ComplexNumber class through including with overloaded operators: + | - | / | * demo");		// Menu element 3
 	//MainMenu.AddElement("XXX");
 
 	do 

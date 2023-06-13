@@ -8,6 +8,9 @@
 
 extern void Task_1();
 extern void Task_2();
+extern void Task_3();
+extern void Task_4();
+
 
 class Main_menu
 {

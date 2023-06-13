@@ -75,26 +75,28 @@ int Get_Int_SA() {
 */
 
 //enum keycodes {Esc=27, Enter=13};
-static std::map <int, std::string> keycodes{ {27, "Esc"}, {13, "Enter"} };
-static std::string console_clear = "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
-static std::string big_space = "                                                           ";
-static std::map <int, int> codes_of_digits { {49, 0}, {50, 1}, {51, 2},{52, 3},{53, 4},{54, 5},{55, 6},{56, 7},{57, 8} };
-static std::map <int, char> codes_of_operation{ {1,'+'}, {2,'-'}, {3,'*'}, {4,'/'} };
+//static std::map <int, std::string> keycodes{ {27, "Esc"}, {13, "Enter"} };
+//static std::string console_clear = "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
+//static std::string big_space = "                                                           ";
+//static std::map <int, int> codes_of_digits { {49, 0}, {50, 1}, {51, 2},{52, 3},{53, 4},{54, 5},{55, 6},{56, 7},{57, 8} };
+//static std::map <int, char> codes_of_operation{ {1,'+'}, {2,'-'}, {3,'*'}, {4,'/'} };
 
-//struct ComplexNumber
-//{	
-////private:
+struct ComplexNumber
+{	
+//private:
 //protected:
-//	double _real_part;
-//	double _imagine_part;
-//};
+	double _real_part;
+	double _imagine_part;
+};
 
+
+/*
 class ComplexNumber
 {
 protected:
 	double _real_part;
 	double _imagine_part;
-};
+};//*/
 
 class ComplexNumber_class_through_inheritance : public ComplexNumber
 {
@@ -118,15 +120,27 @@ public:
 	ComplexNumber_class_through_inheritance& operator/(const ComplexNumber_class_through_inheritance& another_complex_number);
 };
 
-//class ComplexNumber_class_through_including
-//{
-//	ComplexNumber _complex_number;
-//
-//public:
-//	//ComplexNumber_class_through_including(double real_part = -1, double imagine_part = -1) : _complex_number { real_part, imagine_part }	{}
-//
-//	static void Initialisation()
-//	{
-//
-//	}
-//};
+class ComplexNumber_class_through_including
+{
+	ComplexNumber _complex_number;
+	static std::vector <ComplexNumber_class_through_including*> _numbers_list_inc;
+public:
+	//ComplexNumber_class_through_including(double real_part = -1, double imagine_part = -1) : _complex_number { real_part, imagine_part }	{}
+	ComplexNumber_class_through_including(double real_part = -1, double imagine_part = -1);
+	static void Initialisation(int provided_at_startup_complex_number_quantity);
+	static void MemoryClean();
+	static void User_Choice_Handle();
+	static void Show_List_of_available_numbers();
+	static void ShowMethods();
+	static int Check_action_input();
+	void Show();
+	static ComplexNumber_class_through_including* New_number_input();
+	static ComplexNumber_class_through_including* Get_Operand(int operand_number);
+	ComplexNumber_class_through_including& operator+(const ComplexNumber_class_through_including& another_complex_number);
+	ComplexNumber_class_through_including& operator-(const ComplexNumber_class_through_including& another_complex_number);
+	ComplexNumber_class_through_including& operator*(const ComplexNumber_class_through_including& another_complex_number);
+	ComplexNumber_class_through_including& operator/(const ComplexNumber_class_through_including& another_complex_number);
+};
+
+// ¬ывод:::::::::::::::::::::::::::::::::::::::::::::::
+// ѕри наследовании можно сделать пол€ базового класса protected, а при include доступ возможен только если public
