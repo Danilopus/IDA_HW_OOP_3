@@ -74,13 +74,6 @@ int Get_Int_SA() {
 }
 */
 
-//enum keycodes {Esc=27, Enter=13};
-//static std::map <int, std::string> keycodes{ {27, "Esc"}, {13, "Enter"} };
-//static std::string console_clear = "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
-//static std::string big_space = "                                                           ";
-//static std::map <int, int> codes_of_digits { {49, 0}, {50, 1}, {51, 2},{52, 3},{53, 4},{54, 5},{55, 6},{56, 7},{57, 8} };
-//static std::map <int, char> codes_of_operation{ {1,'+'}, {2,'-'}, {3,'*'}, {4,'/'} };
-
 struct ComplexNumber
 {	
 //private:
